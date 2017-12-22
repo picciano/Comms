@@ -81,10 +81,7 @@
 		B48F2A1C1FED66CB00C566E5 /* Comms */ = {
 			isa = PBXGroup;
 			children = (
-				B48F2A1D1FED66CB00C566E5 /* AppDelegate.swift */,
-				B48F2A3C1FEDA4F500C566E5 /* AppDelegate+Logging.swift */,
-				B48F2A3A1FEDA47000C566E5 /* AppDelegate+User.swift */,
-				B48F2A381FED9FFE00C566E5 /* AppDelegate+Lifecycle.swift */,
+				B48F2A3E1FEDA8C300C566E5 /* App Delegate */,
 				B48F2A311FED674800C566E5 /* View Controllers */,
 				B48F2A321FED675200C566E5 /* Models */,
 				B48F2A371FED94F900C566E5 /* Storyboards */,
@@ -119,6 +116,17 @@
 				B48F2A261FED66CB00C566E5 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B48F2A3E1FEDA8C300C566E5 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B48F2A1D1FED66CB00C566E5 /* AppDelegate.swift */,
+				B48F2A3C1FEDA4F500C566E5 /* AppDelegate+Logging.swift */,
+				B48F2A3A1FEDA47000C566E5 /* AppDelegate+User.swift */,
+				B48F2A381FED9FFE00C566E5 /* AppDelegate+Lifecycle.swift */,
+			);
+			path = "App Delegate";
 			sourceTree = "<group>";
 		};
 		BFB646AFED775A877104C24B /* Pods */ = {
