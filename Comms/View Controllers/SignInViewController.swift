@@ -75,7 +75,7 @@ class SignInViewController: UIViewController {
         viewController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         viewController.addAction(UIAlertAction(title: "I Agree", style: .default) { action in
             User.signIn(withFCCInformation: fccInformation) { user in
-                print("Signed in as \(user.callsign)")
+                self.performSegue(withIdentifier: "UnwindToHome", sender: self)
             }
         })
         present(viewController, animated: true, completion: nil)

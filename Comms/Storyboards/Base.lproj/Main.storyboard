@@ -34,30 +34,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exm-Yq-ha9">
-                                <rect key="frame" x="16" y="80" width="47" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wg-uZ-6Re">
+                                <rect key="frame" x="16" y="72" width="343" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="QgO-9q-wUV"/>
+                                    <constraint firstAttribute="height" constant="21" id="Wa0-fg-A6s"/>
                                 </constraints>
-                                <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <segue destination="la3-ee-aQx" kind="show" id="ZUm-w1-oR5"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Exm-Yq-ha9" secondAttribute="trailing" constant="20" symbolic="YES" id="2cR-Ne-0jA"/>
-                            <constraint firstItem="Exm-Yq-ha9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="JIr-US-XB6"/>
-                            <constraint firstItem="Exm-Yq-ha9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="N2o-B4-1M2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9wg-uZ-6Re" secondAttribute="trailing" constant="16" id="K0P-CL-VqF"/>
+                            <constraint firstItem="9wg-uZ-6Re" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lJ8-uF-NFU"/>
+                            <constraint firstItem="9wg-uZ-6Re" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="nwd-Eg-9N3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Comms" id="3UH-yI-7HY"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="signInBarButtonItem" destination="ybq-1C-5kz" id="QKG-lX-q41"/>
+                        <outlet property="signOutBarButtonItem" destination="u1L-OB-4Ds" id="P2U-tY-p5g"/>
+                        <outlet property="statusLabel" destination="9wg-uZ-6Re" id="Wsj-zM-OnS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Sign In" id="ybq-1C-5kz">
+                    <connections>
+                        <segue destination="la3-ee-aQx" kind="show" id="wf6-FZ-ebq"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Sign Out" id="u1L-OB-4Ds">
+                    <connections>
+                        <action selector="signOutAction:" destination="BYZ-38-t0r" id="5ES-7P-PE9"/>
+                    </connections>
+                </barButtonItem>
             </objects>
-            <point key="canvasLocation" x="324" y="126"/>
+            <point key="canvasLocation" x="324" y="125.4872563718141"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="9O5-GD-4X7">
@@ -191,9 +207,11 @@
                         <outlet property="nameLabel" destination="6eY-kU-vdr" id="4Lo-wY-coG"/>
                         <outlet property="signInButton" destination="Znb-RE-nhv" id="XVF-r5-Sb1"/>
                         <outlet property="typeOrClassLabel" destination="dtQ-rQ-6qe" id="hGe-wW-gU4"/>
+                        <segue destination="N7t-GG-BmF" kind="unwind" identifier="UnwindToHome" unwindAction="unwindToHomeWithSegue:" id="xbU-9w-PIk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l87-F8-hbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="N7t-GG-BmF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1104.8" y="126.38680659670166"/>
         </scene>
