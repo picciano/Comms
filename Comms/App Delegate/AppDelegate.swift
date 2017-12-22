@@ -18,6 +18,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initializeUser()
         return true
     }
-    
 }
-

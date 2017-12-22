@@ -28,6 +28,10 @@ class ViewController: UIViewController {
             statusLabel.text = "You are not signed in."
             navigationItem.rightBarButtonItem = signInBarButtonItem
         }
+        
+        // fix for iOS 11.2
+        navigationItem.rightBarButtonItem?.isEnabled = false
+        navigationItem.rightBarButtonItem?.isEnabled = true
     }
     
     @objc func userDidChangeHandler(notification: Notification) {
@@ -35,13 +39,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signOutAction(_ sender: Any) {
-        User.logout()
+        let viewController = UIAlertController(title: "Confirm", message: "Do you want to sign out?", preferredStyle: .alert)
+        viewController.addAction(UIAlertAction(title: "Keep me signed in", style: .cancel))
+        viewController.addAction(UIAlertAction(title: "Sign me out", style: .destructive, handler: { action in
+            User.signOut()
+        }))
+        present(viewController, animated: true)
     }
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
         //nothing goes here
-        navigationItem.rightBarButtonItem?.isEnabled = false
-        navigationItem.rightBarButtonItem?.isEnabled = true
     }
 }
 

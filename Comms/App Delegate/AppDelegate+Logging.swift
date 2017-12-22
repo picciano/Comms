@@ -20,5 +20,4 @@ extension AppDelegate {
         log.removeAllDestinations()
         log.addDestination(console)
     }
-    
 }

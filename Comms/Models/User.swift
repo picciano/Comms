@@ -28,6 +28,7 @@ class User {
     }
     
     let callsign: String
+    var anonymous: Bool
     var fccInformation: FCCInformation?
     
     static func restoreCurrentUser() {
@@ -37,13 +38,10 @@ class User {
         }
     }
     
-    static func signIn(withCallsign callsign: String, completion: @escaping ((User) -> ())) {
-        let user = User(withCallsign: callsign)
+    @discardableResult static func signInAnonymously(withCallsign callsign: String? = nil) -> User {
+        let user = User(withCallsign: callsign ?? Callsign.anonymous)
         User.currentUser = user
-        
-        user.loadFCCInformation {
-            completion(user)
-        }
+        return user
     }
     
     static func signIn(withFCCInformation fccInformation: FCCInformation, completion: ((User) -> ())) {
@@ -52,22 +50,25 @@ class User {
         completion(user)
     }
     
-    static func logout() {
+    static func signOut() {
         User.currentUser = nil
     }
     
     private init(withCallsign callsign: String) {
         self.callsign = callsign
+        self.anonymous = true
     }
     
     private init(withFCCInformation fccInformation: FCCInformation) {
         self.callsign = fccInformation.current.callsign
         self.fccInformation = fccInformation
+        self.anonymous = false
     }
     
     private func loadFCCInformation(completion: (() -> ())? = nil) {
         FCCInformation.from(callsign: callsign) { fccInformation in
             self.fccInformation = fccInformation
+            self.anonymous = fccInformation != nil
             completion?()
         }
     }

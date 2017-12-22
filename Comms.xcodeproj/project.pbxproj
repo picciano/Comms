@@ -19,6 +19,9 @@
 		B48F2A391FED9FFE00C566E5 /* AppDelegate+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F2A381FED9FFE00C566E5 /* AppDelegate+Lifecycle.swift */; };
 		B48F2A3B1FEDA47000C566E5 /* AppDelegate+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F2A3A1FEDA47000C566E5 /* AppDelegate+User.swift */; };
 		B48F2A3D1FEDA4F500C566E5 /* AppDelegate+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F2A3C1FEDA4F500C566E5 /* AppDelegate+Logging.swift */; };
+		B4B24D811FEDB61300E1B26B /* AnonymousSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B24D801FEDB61300E1B26B /* AnonymousSignInViewController.swift */; };
+		B4B24D831FEDB64700E1B26B /* MARSSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B24D821FEDB64700E1B26B /* MARSSignInViewController.swift */; };
+		B4B24D851FEDB9FC00E1B26B /* Callsign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B24D841FEDB9FC00E1B26B /* Callsign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		B48F2A381FED9FFE00C566E5 /* AppDelegate+Lifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Lifecycle.swift"; sourceTree = "<group>"; };
 		B48F2A3A1FEDA47000C566E5 /* AppDelegate+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+User.swift"; sourceTree = "<group>"; };
 		B48F2A3C1FEDA4F500C566E5 /* AppDelegate+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Logging.swift"; sourceTree = "<group>"; };
+		B4B24D801FEDB61300E1B26B /* AnonymousSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousSignInViewController.swift; sourceTree = "<group>"; };
+		B4B24D821FEDB64700E1B26B /* MARSSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MARSSignInViewController.swift; sourceTree = "<group>"; };
+		B4B24D841FEDB9FC00E1B26B /* Callsign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callsign.swift; sourceTree = "<group>"; };
 		DDE3F76FB67A7240188027D2 /* Pods-Comms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comms.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comms/Pods-Comms.release.xcconfig"; sourceTree = "<group>"; };
 		F4E1A8055E47F3DCD0EA0DC8 /* Pods-Comms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comms.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Comms/Pods-Comms.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				B48F2A3E1FEDA8C300C566E5 /* App Delegate */,
+				B4B24D861FEDBAFE00E1B26B /* Classes and Extensions */,
 				B48F2A311FED674800C566E5 /* View Controllers */,
 				B48F2A321FED675200C566E5 /* Models */,
 				B48F2A371FED94F900C566E5 /* Storyboards */,
@@ -96,6 +103,8 @@
 			children = (
 				B48F2A1F1FED66CB00C566E5 /* ViewController.swift */,
 				B48F2A2F1FED672000C566E5 /* SignInViewController.swift */,
+				B4B24D801FEDB61300E1B26B /* AnonymousSignInViewController.swift */,
+				B4B24D821FEDB64700E1B26B /* MARSSignInViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -105,6 +114,7 @@
 			children = (
 				B48F2A331FED678100C566E5 /* User.swift */,
 				B48F2A351FED69CE00C566E5 /* FCCInformation.swift */,
+				B4B24D841FEDB9FC00E1B26B /* Callsign.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,6 +137,13 @@
 				B48F2A381FED9FFE00C566E5 /* AppDelegate+Lifecycle.swift */,
 			);
 			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		B4B24D861FEDBAFE00E1B26B /* Classes and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Classes and Extensions";
 			sourceTree = "<group>";
 		};
 		BFB646AFED775A877104C24B /* Pods */ = {
@@ -269,12 +286,15 @@
 			files = (
 				B48F2A341FED678100C566E5 /* User.swift in Sources */,
 				B48F2A301FED672000C566E5 /* SignInViewController.swift in Sources */,
+				B4B24D811FEDB61300E1B26B /* AnonymousSignInViewController.swift in Sources */,
 				B48F2A3D1FEDA4F500C566E5 /* AppDelegate+Logging.swift in Sources */,
 				B48F2A201FED66CB00C566E5 /* ViewController.swift in Sources */,
+				B4B24D831FEDB64700E1B26B /* MARSSignInViewController.swift in Sources */,
 				B48F2A3B1FEDA47000C566E5 /* AppDelegate+User.swift in Sources */,
 				B48F2A1E1FED66CB00C566E5 /* AppDelegate.swift in Sources */,
 				B48F2A361FED69CE00C566E5 /* FCCInformation.swift in Sources */,
 				B48F2A391FED9FFE00C566E5 /* AppDelegate+Lifecycle.swift in Sources */,
+				B4B24D851FEDB9FC00E1B26B /* Callsign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

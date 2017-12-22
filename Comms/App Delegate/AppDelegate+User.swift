@@ -13,5 +13,4 @@ extension AppDelegate {
     func initializeUser() {
         User.restoreCurrentUser()
     }
-    
 }

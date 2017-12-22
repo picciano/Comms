@@ -9,7 +9,7 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-
+    
     @IBOutlet weak var callsignTextField: UITextField!
     @IBOutlet weak var typeOrClassLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -90,7 +90,6 @@ class SignInViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
 extension SignInViewController: UITextFieldDelegate {
@@ -100,5 +99,4 @@ extension SignInViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
 }
