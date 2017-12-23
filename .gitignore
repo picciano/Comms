@@ -36,5 +36,8 @@ fastlane/README.md
 fastlane/report.xml
 fastlane/test_output/*
 
+## Firebase
+GoogleService-Info.plist
+
 ##OSX
 .DS_Store

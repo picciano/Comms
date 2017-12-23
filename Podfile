@@ -7,5 +7,6 @@ target 'Comms' do
 
   # Pods for Comms
   pod 'SwiftyBeaver', '~> 1.5.0'
+  pod 'Firebase/Core'
 
 end

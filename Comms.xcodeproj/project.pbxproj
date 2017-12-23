@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		52D1B027D3CFC6DC866DA237 /* Pods_Comms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B15069771D9252DD595B3A2 /* Pods_Comms.framework */; };
+		B46E3DC11FEDD0BE00A5D443 /* AppDelegate+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E3DC01FEDD0BE00A5D443 /* AppDelegate+Firebase.swift */; };
+		B46E3DC51FEDD3FC00A5D443 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B46E3DC41FEDD3FC00A5D443 /* GoogleService-Info.plist */; };
 		B48F2A1E1FED66CB00C566E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F2A1D1FED66CB00C566E5 /* AppDelegate.swift */; };
 		B48F2A201FED66CB00C566E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F2A1F1FED66CB00C566E5 /* ViewController.swift */; };
 		B48F2A231FED66CB00C566E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48F2A211FED66CB00C566E5 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		4B15069771D9252DD595B3A2 /* Pods_Comms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46E3DC01FEDD0BE00A5D443 /* AppDelegate+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Firebase.swift"; sourceTree = "<group>"; };
+		B46E3DC41FEDD3FC00A5D443 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B48F2A1A1FED66CB00C566E5 /* Comms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48F2A1D1FED66CB00C566E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B48F2A1F1FED66CB00C566E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				B48F2A371FED94F900C566E5 /* Storyboards */,
 				B48F2A241FED66CB00C566E5 /* Assets.xcassets */,
 				B48F2A291FED66CB00C566E5 /* Info.plist */,
+				B46E3DC41FEDD3FC00A5D443 /* GoogleService-Info.plist */,
 			);
 			path = Comms;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				B48F2A1D1FED66CB00C566E5 /* AppDelegate.swift */,
 				B48F2A3C1FEDA4F500C566E5 /* AppDelegate+Logging.swift */,
 				B48F2A3A1FEDA47000C566E5 /* AppDelegate+User.swift */,
+				B46E3DC01FEDD0BE00A5D443 /* AppDelegate+Firebase.swift */,
 				B48F2A381FED9FFE00C566E5 /* AppDelegate+Lifecycle.swift */,
 			);
 			path = "App Delegate";
@@ -218,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48F2A281FED66CB00C566E5 /* LaunchScreen.storyboard in Resources */,
+				B46E3DC51FEDD3FC00A5D443 /* GoogleService-Info.plist in Resources */,
 				B48F2A251FED66CB00C566E5 /* Assets.xcassets in Resources */,
 				B48F2A231FED66CB00C566E5 /* Main.storyboard in Resources */,
 			);
@@ -233,11 +240,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Comms/Pods-Comms-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -289,6 +300,7 @@
 				B4B24D811FEDB61300E1B26B /* AnonymousSignInViewController.swift in Sources */,
 				B48F2A3D1FEDA4F500C566E5 /* AppDelegate+Logging.swift in Sources */,
 				B48F2A201FED66CB00C566E5 /* ViewController.swift in Sources */,
+				B46E3DC11FEDD0BE00A5D443 /* AppDelegate+Firebase.swift in Sources */,
 				B4B24D831FEDB64700E1B26B /* MARSSignInViewController.swift in Sources */,
 				B48F2A3B1FEDA47000C566E5 /* AppDelegate+User.swift in Sources */,
 				B48F2A1E1FED66CB00C566E5 /* AppDelegate.swift in Sources */,

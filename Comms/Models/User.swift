@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import Firebase
 
 let CommsUserDidChangeNotification = Notification.Name(rawValue: "CommsUserDidChangeNotification")
 
 private let COMMS_CURRENT_USER_KEY = "COMMS_CURRENT_USER"
 
 class User {
+    
+//    static let ref = FIr
     
     static var currentUser: User? {
         didSet {
